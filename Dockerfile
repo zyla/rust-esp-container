@@ -90,11 +90,10 @@ RUN  git clone \
 # -------------------------------------------------------------------
 
 WORKDIR "${LLVM_BASE}"
-RUN mkdir "${LLVM_PATH}" \
+RUN git clone https://github.com/espressif/llvm-project.git -b xtensa_release_9.0.1 "${LLVM_PATH}" \
  && cd "${LLVM_PATH}" \
  && git init \
- && git remote add origin https://github.com/espressif/llvm-xtensa.git \
- && git fetch --depth 1 origin "${LLVM_VERSION}" \
+ && git fetch --depth 1 origin  \
  && git checkout FETCH_HEAD \
  && mkdir -p "${LLVM_PATH}/tools/clang" \
  && cd "${LLVM_PATH}/tools/clang" \
