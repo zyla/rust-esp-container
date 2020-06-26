@@ -15,7 +15,7 @@ ARG CLANG_VERSION="248d9ce8765248d953c3e5ef4022fb350bbe6c51"
 ARG LLVM_VERSION="757e18f722dbdcd98b8479e25041b1eee1128ce9"
 
 # rust-xtensa
-ARG RUSTC_VERSION="b365cff41a60df8fd5f1237ef71897edad0375dd"
+ARG RUSTC_VERSION="fc20a1b835a1db5098cf4ac8dc54f2c59ac36d12"
 
 # -------------------------------------------------------------------
 # Toolchain Path Config
