@@ -5,7 +5,7 @@ FROM debian:buster-slim
 # -------------------------------------------------------------------
 
 # Espressif toolchain
-ARG ESP_VERSION="1.22.0-80-g6c4433a-5.2.0"
+ARG ESP_VERSION="1.22.0-100-ge567ec7-5.2.0"
 
 # esp-idf framework
 ARG IDF_VERSION="v3.3-beta3"
@@ -70,7 +70,7 @@ RUN curl \
        --tlsv1.2 \
        -sSf \
        -o "${ESP_PATH}.tar.gz" \
-       "https://dl.espressif.com/dl/xtensa-esp32-elf-linux64-${ESP_VERSION}.tar.gz" \
+       "https://dl.espressif.com/dl/xtensa-lx106-elf-linux64-${ESP_VERSION}.tar.gz" \
  && mkdir "${ESP_PATH}" \
  && tar -xzf "${ESP_PATH}.tar.gz" -C "${ESP_PATH}" --strip-components 1 \
  && rm -rf "${ESP_PATH}.tar.gz"
